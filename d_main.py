@@ -1,18 +1,22 @@
-# import torch
-# import torch.nn as nn
-# import matplotlib.pyplot as plt
-# import pandas as pd
-# import numpy as np
-# import os
-# from torchvision.models import resnet18, ResNet18_Weights
-# from torchvision import transforms
-# from PIL import Image
-# import torch
+import os
+from b_p_hash import do_next_or_not
 from c_vector_sim import __vector_cmp__
-
+import cv2
 
 img_folder_path = r"C:\Users\shour\OneDrive\Desktop\test_ukbench"
 img_1_name = "ukbench00000.jpg"
-img_2_name = "ukbench00001.jpg"
-alpha = 0.54
-print(__vector_cmp__(img_folder_path,img_1_name,img_folder_path,img_2_name,alpha))
+img_2_name = "ukbench00009.jpg"
+alpha = 0.75
+
+im1 = cv2.imread(os.path.join(img_folder_path,img_1_name))
+im2 = cv2.imread(os.path.join(img_folder_path,img_2_name))
+im1 = cv2.cvtColor(im1,cv2.COLOR_BGR2GRAY)
+im2 = cv2.cvtColor(im2,cv2.COLOR_BGR2GRAY)
+im1 = cv2.resize(im1, (32,32))
+im2 = cv2.resize(im2, (32,32))
+
+
+if(do_next_or_not(im1,im2)):
+    print(__vector_cmp__(img_folder_path,img_1_name,img_folder_path,img_2_name,alpha))
+else:
+    print("11not duplicate")
