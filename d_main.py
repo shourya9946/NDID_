@@ -14,5 +14,5 @@ from c_vector_sim import __vector_cmp__
 img_folder_path = r"C:\Users\shour\OneDrive\Desktop\test_ukbench"
 img_1_name = "ukbench00000.jpg"
 img_2_name = "ukbench00001.jpg"
-alpha = 0.54
+alpha = 0.75
 print(__vector_cmp__(img_folder_path,img_1_name,img_folder_path,img_2_name,alpha))
