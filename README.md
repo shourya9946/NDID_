@@ -22,7 +22,7 @@ This project implements an efficient image duplicate detection pipeline that:
 ```
 NDID_/
 ├── a_preprocess.py          # Image preprocessing and embedding extraction
-├── b_p_hash.py              # Perceptual hashing utilities (placeholder)
+├── b_p_hash.py              # Perceptual hashing utilities with DCT implementation
 ├── c_vector_sim.py          # Vector similarity comparison module
 ├── d_main.py                # Main entry point and usage example
 ├── siamese_triple.pth       # Pre-trained Siamese-Triple model weights
@@ -30,6 +30,12 @@ NDID_/
 ```
 
 ## Module Descriptions
+
+### b_p_hash.py
+**Perceptual Hashing Utilities**
+
+Functions:
+- `DCT(im)`: Computes the Discrete Cosine Transform of a given image.
 
 ### a_preprocess.py
 **Image Preprocessing & Embedding Generation**
