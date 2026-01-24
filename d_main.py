@@ -19,4 +19,4 @@ im2 = cv2.resize(im2, (32,32))
 if(do_next_or_not(im1,im2)):
     print(__vector_cmp__(img_folder_path,img_1_name,img_folder_path,img_2_name,alpha))
 else:
-    print("11not duplicate")
+    print("not duplicate_(got_without_triplet_model)")
