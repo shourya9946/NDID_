@@ -39,7 +39,7 @@ def hash_find(im):
 def do_next_or_not(im1,im2):
     a1 = hash_find(im1)
     a2 = hash_find(im2)
-    if (64 - np.sum((a1 == a2)))>20:
+    if (64 - np.sum((a1 == a2)))>30:
         return 0
     else:
         return 1

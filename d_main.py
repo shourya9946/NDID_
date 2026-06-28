@@ -3,10 +3,11 @@ from b_p_hash import do_next_or_not
 from c_vector_sim import __vector_cmp__
 import cv2
 
-img_folder_path = r"C:\Users\shour\OneDrive\Desktop\test_ukbench"
-img_1_name = "ukbench00000.jpg"
-img_2_name = "ukbench00009.jpg"
-alpha = 0.75
+img_folder_path = r"C:\Users\shour\Downloads"
+# img_folder_path2 = r"C:\Users\shour\Downloads\archive\train\wingsuit flying"
+img_1_name = "WhatsApp Image 2026-05-22 at 9.23.17 PM.jpeg"
+img_2_name = "WhatsApp Image 2026-05-22 at 9.23.17 PM (1).jpeg"
+alpha = 0.9
 
 im1 = cv2.imread(os.path.join(img_folder_path,img_1_name))
 im2 = cv2.imread(os.path.join(img_folder_path,img_2_name))
